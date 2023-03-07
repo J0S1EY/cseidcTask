@@ -1,0 +1,47 @@
+<div class="container mt-3 mb-4">
+    <i routerLink="/addUser" style="color: rgb(2, 98, 2); font-size: larger;" class="fa-solid fa-user-plus"></i>
+    <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+                    <table class="table manage-candidates-top mb-0">
+                        <thead>
+                            <tr>
+                                <th>Users Data</th>
+                                <th class="text-center">Mobile</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let userData of allData">
+                            <tr class="candidates-list">
+                                <td class="title">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                                            alt="">
+                                    </div>
+                                    <div class="candidate-list-details">
+                                        <div class="candidate-list-info">
+                                            <div class="candidate-list-title">
+                                                <h5 class="mb-0">Name: {{userData.userName}}</h5>
+                                            </div>
+                                            <div class="candidate-list-option">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fas fa-filter pr-1"></i>Designation:
+                                                        {{userData.designation}}</li>
+                                                    <li><i class="fas fa-map-marker-alt pr-1"></i>Place:
+                                                        {{userData.place}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="candidate-list-favourite-time text-center">
+                                    <span class="candidate-list-time order-1">{{userData.number}}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
